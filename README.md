@@ -33,6 +33,6 @@ Our web application generates outputs classified as "Real" or "Fake," providing 
 
 # Contributors
 - Sandesh Lingayat : https://github.com/stranger-814 
-- Sailaja Rao :
+- Sailaja Rao : https://github.com/SailajaRao
 - Mugdha Kokate : https://github.com/Mugdha612
 - Anish Thube :
