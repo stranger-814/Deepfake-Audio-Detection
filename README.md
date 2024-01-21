@@ -32,7 +32,7 @@ After downloading the datasets, extract them under `data/bonafide` and `data/fak
 Our web application generates outputs classified as "Real" or "Fake," providing a seamless experience for identifying manipulated audio content.
 
 # Contributors
-- Sandesh Lingayat : 
+- Sandesh Lingayat : https://github.com/stranger-814 
 - Sailaja Rao :
 - Mugdha Kokate :
 - Anish Thube :
