@@ -8,17 +8,25 @@ A cutting-edge deepfake audio detection web application. This project is dedicat
    ```
 
 2. Navigate to the project directory:
+   ```
    cd DeepFake-Audio-Detection
+   ```
 
 3. Install Flask:
    Ensure Flask is installed on your system:
+   ```
    pip install flask
+   ```
 
 4. Install dependencies:
+   ```
    pip install -r requirements.txt
+   ```
 
 5. Run the web application:
+   ```
    python app.py
+   ```
 
 # Setup Datasets
 Access the original datasets used in our project from the following URLs:
