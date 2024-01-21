@@ -45,4 +45,4 @@ Our web application generates outputs classified as "Real" or "Fake," providing 
 - Sandesh Lingayat : https://github.com/stranger-814 
 - Sailaja Rao : https://github.com/SailajaRao
 - Mugdha Kokate : https://github.com/Mugdha612
-- Anish Thube :
+- Anish Thube : https://github.com/anisshh01
