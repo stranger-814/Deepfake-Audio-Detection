@@ -28,7 +28,7 @@ Access the original datasets used in our project from the following URLs:
 
 After downloading the datasets, extract them under `data/bonafide` and `data/fake` respectively.
 
-Output
+# Output
 Our web application generates outputs classified as "Real" or "Fake," providing a seamless experience for identifying manipulated audio content.
 
 Contributors
