@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Audio Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('https://www.tripwire.com/sites/default/files/Deepfake-Voice-Technology.jpg'); /* Dark background color */
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Verdana', sans-serif;
+            color: #ecf0f1; /* Light text color */
+        }
+
+        .container {
+            height: 50vh;
+            background-color: #111216; /* Blue container background */
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgb(0, 194, 255); /* Slightly darker shadow */
+            padding: 20px;
+            margin-top: 150px;
+        }
+
+        h1 {
+            color: #00C2FF; /* White header text */
+            font-size: 55px;
+            padding-top: 50px;
+        }s
+
+        #audioForm {
+            margin-top: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 27px;
+            color: #ffffff;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out; /* Fade in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Deepfake Audio Detection</h1>
+        <form id="audioForm" action="/detect" method="post" enctype="multipart/form-data" class="mt-4">
+            <div class="form-group">
+                <label for="audioFile">Upload Audio File:</label>
+                <input type="file" class="form-control-file" id="audioFile" name="audio" accept=".wav, .mp3" required>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block"style="background-color: #00C2FF;color: #111216;font-size: 17px;"><b>Detect</b></button>
+        </form>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Add any additional scripts here -->
+    <script>
+        // Add JavaScript for handling form submission and displaying results
+        document.getElementById('audioForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Fetch input file
+            const audioFile = document.getElementById('audioFile').files[0];
+
+            // Create FormData object to send the file
+            const formData = new FormData();
+            formData.append('audio', audioFile);
+
+            // Send a POST request to the server for audio detection
+            fetch('/detect', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the result on the webpage with fade-in animation
+                document.getElementById('result').innerHTML = `<h3 class="text-center">Result: ${data.result}</h3>`;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
