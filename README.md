@@ -1,7 +1,7 @@
 # DeepFake Audio Detection
 A cutting-edge deepfake audio detection web application. This project is dedicated to utilizing the Xception model, specifically trained on Mel-frequency cepstral coefficients (MFCC) features, to provide accurate and reliable detection of deepfake audio.
 
-Getting Started
+# Getting Started
 1. Clone the repository:
    git clone https://github.com/your-username/DeepFake-Audio-Detection.git
 
@@ -18,7 +18,7 @@ Getting Started
 5. Run the web application:
    python app.py
 
-Setup Datasets
+# Setup Datasets
 Access the original datasets used in our project from the following URLs:
 - (Bonafide) Human Voice Dataset:
   - [LJ Speech (v1.1)]( https://zenodo.org/records/5642694) - Consists of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books.
@@ -31,8 +31,8 @@ After downloading the datasets, extract them under `data/bonafide` and `data/fak
 # Output
 Our web application generates outputs classified as "Real" or "Fake," providing a seamless experience for identifying manipulated audio content.
 
-Contributors
-- Sandesh Lingayat
-- Sailaja Rao
-- Mugdha Kokate
-- Anish Thube
+# Contributors
+- Sandesh Lingayat : 
+- Sailaja Rao :
+- Mugdha Kokate :
+- Anish Thube :
