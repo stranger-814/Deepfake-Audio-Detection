@@ -70,7 +70,7 @@ def detect_audio():
 
     # Make a prediction using the loaded Xception model
     prediction = loaded_model.predict(img_array)
-    result = "The Audio is Fake" if prediction[0][0] > 0.7 else "The Audio is Bonafide"
+    result = "The Audio is Fake" if prediction[0][0] > 0.5 else "The Audio is Bonafide"
 
     # Return the result as JSON
     return jsonify({'result': result})
